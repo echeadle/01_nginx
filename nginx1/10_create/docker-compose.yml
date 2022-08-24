@@ -1,0 +1,18 @@
+
+services:
+
+  nginx:
+    build: .
+    image: nginx:latest
+    container_name: nginx
+    volumes:
+      - .:/app
+    ports:
+      - 8080:80
+    networks:
+      - server-net
+
+networks:
+  server-net:
+    driver: bridge
+
