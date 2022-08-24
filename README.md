@@ -1,1 +1,1 @@
-Udemy NGINX Fundamentals: High Performance Servers from Scratch
+Udemy Course: NGINX Fundamentals: High Performance Servers from Scratch
