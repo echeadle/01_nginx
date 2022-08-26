@@ -1,0 +1,31 @@
+events {}
+
+
+http {
+
+    include mime.types;
+
+    server {
+        listen 80;
+        server_name 127.0.0.1;
+
+        root  /sites/demo;
+        # Try Files 
+        #try_files $uri /cat.png  /greet /friendly_404;
+
+        #location /friendly_404 {
+        #    return 404 "Sorry, that file is not found.";
+        #}
+
+        # Named Locations
+        try_files $uri   /greet @friendly_404;
+
+        location @friendly_404 {
+            return 404 "Sorry, that file is not found.";
+        }
+
+        location /greet {
+            return 200 "Hello User";
+        }
+    }
+}
