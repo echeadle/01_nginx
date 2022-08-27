@@ -17,3 +17,6 @@ ls:
 
 prune:
 	docker system prune
+
+conn:
+	docker compose exec -it nginx bash

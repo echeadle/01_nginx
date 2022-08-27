@@ -6,7 +6,7 @@ COPY ./demo/.  /sites/demo/
 
 #COPY content /usr/share/nginx/html
 COPY config /etc/nginx
-
+COPY ssl /etc/nginx/ssl
 
 VOLUME /usr/share/nginx/html
 VOLUME /etc/nginx
