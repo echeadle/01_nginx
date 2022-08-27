@@ -1,3 +1,9 @@
 mkdir /etc/nginx/ssl
 
+# Create Self signed certificate
+
 openssl req -x509 -days 10 -nodes -newkey rsa:2048 -keyout self.key -out self.crt
+
+
+# Create dhparams
+openssl dhparam  -out dhparam.pem 2048
