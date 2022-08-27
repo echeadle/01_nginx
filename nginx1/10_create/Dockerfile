@@ -1,9 +1,11 @@
 FROM nginx:1.23.1
 
-COPY ./config/.  /etc/nginx/
-COPY ./demo/.  /sites/demo/
+RUN rm /etc/nginx/nginx.conf /etc/nginx/conf.d/default.conf
+COPY content /usr/share/nginx/html
+COPY config /etc/nginx
 
-
+VOLUME /usr/share/nginx/html
+VOLUME /etc/nginx
 
 
 

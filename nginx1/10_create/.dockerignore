@@ -1,1 +1,4 @@
 demo-site.zip
+config/nginx.conf.*
+config/REGEX.md
+config/REWRITE.md
