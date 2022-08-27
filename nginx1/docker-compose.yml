@@ -2,7 +2,7 @@
 services:
 
   nginx:
-    build: .
+    build: ./
     image: nginx:latest
     container_name: nginx
     volumes:
